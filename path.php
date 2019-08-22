@@ -1,4 +1,4 @@
-<?php// author - ISA(류윤종)
+<?php // author - ISA(류윤종)
 
 //path
 define('ROOT', '')

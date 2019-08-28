@@ -21,7 +21,7 @@ $button = add_commerce('바보상자팝니다', '2000', '100', 'profileimg', '�
     add_button('share', '공유하기', '필요없는 요소');
     add_button('block', '구경하기', '짜잔! 우리가 찾던 보물입니다');
 
-
 $json = json_encode($response, JSON_UNESCAPED_UNICODE);
-echo $json; 
+echo $json;
+echo "test";
 ?>

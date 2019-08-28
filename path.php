@@ -11,8 +11,10 @@ require_once(ROOT.'data/chatbot_form.php');
 require_once(ROOT.'data/constants.php');
 require_once(ROOT.'data/constants.php');
 
-// kakao res init
+// kakao req init
 $count = 0;
 $card = '';
+$item = 0;
+$carousel = false;
 $response['version'] = VERSION;
  ?>

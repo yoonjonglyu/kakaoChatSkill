@@ -15,6 +15,7 @@ require_once(ROOT.'data/constants.php');
 $count = 0;
 $card = '';
 $item = 0;
+$params = array();
 $carousel = false;
 $response['version'] = VERSION;
  ?>

@@ -10,4 +10,9 @@ define('ROOT', '')
 require_once(ROOT.'data/chatbot_form.php');
 require_once(ROOT.'data/constants.php');
 require_once(ROOT.'data/constants.php');
+
+// kakao res init
+$count = 0;
+$card = '';
+$response['version'] = VERSION;
  ?>

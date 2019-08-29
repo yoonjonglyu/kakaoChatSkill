@@ -168,16 +168,16 @@ function add_button($I, $T, $C){
 }
 
 function add_quick($I, $A, $C, $blockId = null, $E = null){
-    global $response;
+    global $response, $quick;
 
-    $response['template']['quickReplies'][sizeof($response['template']['quickReplies'])]["lebel"] = "$I";
-    $response['template']['quickReplies'][sizeof($response['template']['quickReplies'])]["action"] = "$A";
-    $response['template']['quickReplies'][sizeof($response['template']['quickReplies'])]["messageText"] = "$C";
+    $response['template']['quickReplies'][$quick]["lebel"] = "$I";
+    $response['template']['quickReplies'][$quick]["action"] = "$A";
+    $response['template']['quickReplies'][$quick]["messageText"] = "$C";
     if($blockId !== null){
-        $response['template']['quickReplies'][sizeof($response['template']['quickReplies'])]["blockId"] = "$blockId";
+        $response['template']['quickReplies'][$quick]["blockId"] = "$blockId";
     }
     if($E !== null){
-        $response['template']['quickReplies'][sizeof($response['template']['quickReplies'])]["extra"] = "$E";
+        $response['template']['quickReplies'][$quick]["extra"] = "$E";
     }
 }
 

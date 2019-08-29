@@ -177,11 +177,13 @@ function add_quick($I, $A, $C, $blockId = null, $E = null){
         $response['template']['quickReplies'][$quick]["blockId"] = "$blockId";
     }
     if($E !== null){
-        $response['template']['quickReplies'][$quick]["extra"] = "$E";
+        $response['template']['quickReplies'][$quick]["extra"] = $E;
     }
 }
 
 function set_param($K, $V){
+    global $params;
+
     $params[$K] = "$V";
 }
 

@@ -1,5 +1,11 @@
 <?php // author - ISA(류윤종)
 
+//dbconfig 데이터베이스 연결정보
+
+define('LOCALHOST', 'host');// DB서버경로
+define('USERID', 'user1'); // 사용자
+define('PASSWORD', 'password'); // 비밀번호
+define('DATABASE', 'dbtest');  // use database
 
 // blockid 블록아이디를 기입하는 장소
 $blockid_main = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,null]; // *메인 한 카드에 버튼 3개가 들어가니 3개씩 묶어서 사용한다. 사용하지 않는 버튼은 null 으로 사용한다.

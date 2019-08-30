@@ -1,7 +1,7 @@
 <?php // author - ISA(류윤종)
 	function conn()
 	{
-		$dbc = mysqli_connect("localhost", "userid", "password", "usedb");
+		$dbc = mysqli_connect(LOCALHOST, USERID, PASSWORD, DATABASE);
 		
 		mysqli_query($dbc, "set session character_set_connection=utf8;");
 		mysqli_query($dbc, "set session character_set_results=utf8;");

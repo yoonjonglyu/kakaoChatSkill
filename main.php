@@ -22,11 +22,11 @@ $button = add_basic('st','md', 'ls');
     add_button('webLink', '구경하기', '짜잔! 우리가 찾던 보물입니다');
 $button = add_basic('st','md', 'ls');
     add_button('message', '구경하기', '짜잔! 우리가 찾던 보물입니다');
-    add_extra('dd2','asd');
     add_button('webLink', '구경하기', '짜잔! 우리가 찾던 보물입니다');
 end_carousel(); // 캐로셀끝
 set_param('type', '1'); // 퀵메뉴 파라메터 지정 $params에 오브젝트 형식으로 저장한다.
-add_quick('바로가기', 'share', '바로가기', MAINQ_0, $params); // 퀵메뉴 지정
+add_quick('처음으로', 'block', '처음으로', MAINQ_0, $params);
+add_quick('뒤로가기', 'block', '뒤로가기', MAINQ_0, $params); // 퀵메뉴 지정
 $json = json_encode($response, JSON_UNESCAPED_UNICODE);
 echo $json;
 ?>

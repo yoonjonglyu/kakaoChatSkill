@@ -1,11 +1,12 @@
 <?php // author - ISA(류윤종)
 
 //path
-$ROOT = $_SERVER['DOCUMENT_ROOT']; // 루트
-define('ROOT', $ROOT.'/kakaoChatSkill/'); // 프로젝트 시작점
-define('DATA', ROOT.'data/'); // 데이터 관련 경로
-define('ASSETS', ROOT.'assets/'); // 파일 관련 경로
-define('MODULES', ROOT.'modules/'); // 모듈(기능) 관련 경로
+$ROOT = $_SERVER['DOCUMENT_ROOT']; // 웹서버 루트
+$ADDR = $_SERVER['SERVER_ADDR']; // 스태틱서버 주소;
+define('ROOT', '/kakaoChatSkill/'); // 프로젝트 시작점
+define('DATA', $ROOT.ROOT.'data/'); // 데이터 관련 경로
+define('ASSETS', "http://".$ADDR.ROOT.'assets/'); // 파일 관련 경로
+define('MODULES', $ROOT.ROOT.'modules/'); // 모듈(기능) 관련 경로
 ?>
 
 

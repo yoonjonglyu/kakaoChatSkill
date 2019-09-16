@@ -171,7 +171,7 @@ function add_button($I, $T, $C){
 function add_quick($I, $A, $C, $blockId = null, $E = null){
     global $response, $quick;
 
-    $response['template']['quickReplies'][$quick]["lebel"] = "$I";
+    $response['template']['quickReplies'][$quick]["label"] = "$I";
     $response['template']['quickReplies'][$quick]["action"] = "$A";
     $response['template']['quickReplies'][$quick]["messageText"] = "$C";
     if($blockId !== null){
@@ -180,6 +180,7 @@ function add_quick($I, $A, $C, $blockId = null, $E = null){
     if($E !== null){
         $response['template']['quickReplies'][$quick]["extra"] = $E;
     }
+    $quick++;
 }
 
 function set_param($K, $V){

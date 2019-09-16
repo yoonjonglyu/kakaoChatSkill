@@ -27,5 +27,6 @@ $item = 0; // 리스트 아이템 count
 $quick = 0; // 퀵메뉴 count
 $params = array(); // 파라메터 초기화
 $carousel = false; // 캐로셀 스위치
+$index = 0;
 $response['version'] = VERSION; // json 선언
  ?>

@@ -8,7 +8,7 @@ define('PASSWORD', 'password'); // 비밀번호
 define('DATABASE', 'dbtest');  // use database
 
 // blockid 블록아이디를 기입하는 장소
-$blockid_main = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,null]; // *메인 한 카드에 버튼 3개가 들어가니 3개씩 묶어서 사용한다. 사용하지 않는 버튼은 null 으로 사용한다.
+$blockid_main = ["1",2,3,4,5,6,7,8,9,10,11,12,13,14,null]; // *메인 한 카드에 버튼 3개가 들어가니 3개씩 묶어서 사용한다. 사용하지 않는 버튼은 null 으로 사용한다.
 $blockid_1 = [1,2,3,4,5,6,7,8];//계층1                     // * 전체 블록은 블록아이디 전체 길이에 맞춰서 자동으로 상수를 생성하는 시스템.
 $blockid_2 = [1,2,3,4,5,6,7,8];//계층2
 $blockid_3 = [1,2,3,4,5,6,7,8];//계층3
@@ -20,7 +20,7 @@ $blockid_8 = [1,2,3,4,5,6,7,8];//계층8
 
 
 // quck menu 
-$quick_main = [1,2,3,4,5];//메인
+$quick_main = ["5cebabe605aaa7533585ad6e",2,3,4,5];//메인
 $quick_1 = [1,2,3,4,5];//계층1
 $quick_2 = [1,2,3,4,5];//계층2
 $quick_3 = [1,2,3,4,5];//계층3
@@ -41,7 +41,6 @@ $node5_length = sizeof($blockid_5);
 $node6_length = sizeof($blockid_6);
 $node7_length = sizeof($blockid_7);
 $node8_length = sizeof($blockid_8);
-
 
 // quick 길이 체크
 $mainq_length = sizeof($quick_main);

@@ -2,10 +2,10 @@
 
 //path
 $ROOT = $_SERVER['DOCUMENT_ROOT']; // 웹서버 루트
-$ADDR = $_SERVER['SERVER_ADDR']; // 스태틱서버 주소;
+$ADDR = "http://".$_SERVER['SERVER_ADDR']; // 스태틱서버 주소;
 define('ROOT', '/kakaoChatSkill/'); // 프로젝트 시작점
 define('DATA', $ROOT.ROOT.'data/'); // 데이터 관련 경로
-define('ASSETS', "http://".$ADDR.ROOT.'assets/'); // 파일 관련 경로
+define('ASSETS', $ADDR.ROOT.'assets/'); // 파일 관련 경로
 define('MODULES', $ROOT.ROOT.'modules/'); // 모듈(기능) 관련 경로
 ?>
 
@@ -14,10 +14,8 @@ define('MODULES', $ROOT.ROOT.'modules/'); // 모듈(기능) 관련 경로
 require_once(DATA.'chatbot_form.php'); // 카카오톡 스킬 
 require_once(DATA.'constants.php'); // 상수모음
 require_once(DATA.'sql_user.php'); // db 관련 모음
+require_once(MODULES.'MM.php'); // moudle manager 모든 모듈을 연결하는 파일
 
-/*
-require_once(MODULES.'test.php');
-*/
 
 
 // kakao res init 응답 변수 초기화 
@@ -28,6 +26,6 @@ $item = 0; // 리스트 아이템 count
 $quick = 0; // 퀵메뉴 count
 $params = array(); // 파라메터 초기화
 $carousel = false; // 캐로셀 스위치
-$index = 0;
+$index = 0; //케로셀 인덱스
 $response['version'] = VERSION; // json 선언
  ?>

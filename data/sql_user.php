@@ -1,4 +1,6 @@
 <?php // author - ISA(류윤종)
+
+
 	function conn() // db연결
 	{
 		$dbc = mysqli_connect(LOCALHOST, USERID, PASSWORD, DATABASE);
@@ -10,7 +12,7 @@
 		return $dbc;
     }
 	function search_basic($region, $category){
-		conn();
-		mysqli_query("SELECT * FROM bizinfodata WHERE sp_region = '$region' AND sp_category = '$category");
+		$dbc = conn();
+		mysqli_query($dbc, "SELECT * FROM bizinfodata WHERE sp_region = '$region' AND sp_category = '$category");
 	}
  ?>

@@ -1,5 +1,9 @@
 <?php // author - ISA(류윤종)
 
+//dev mode error switch
+error_reporting(E_ALL); 
+ini_set("display_errors", 1);
+
 //path
 $ROOT = $_SERVER['DOCUMENT_ROOT']; // 웹서버 루트
 $ADDR = "http://".$_SERVER['SERVER_ADDR']; // 스태틱서버 주소;

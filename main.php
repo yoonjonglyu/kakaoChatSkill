@@ -1,8 +1,8 @@
 <?php // author - ISA(류윤종)
-
-require_once("path.php");
+require_once("path.php"); 
 
 $asset = ASSETS."main/";
+
 
 add_text("최신 지원사업 정보를 제공하는\n지원사업알리미챗봇 입니다."); // 심플텍스트 추가 응답 3/1 사용
 

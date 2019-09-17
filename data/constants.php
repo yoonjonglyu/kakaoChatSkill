@@ -3,10 +3,9 @@
 //dbconfig 데이터베이스 연결정보
 
 define('LOCALHOST', 'localhost');// DB서버경로
-define('USERID', '사용자'); // 사용자
-define('PASSWORD', '비밀번호'); // 비밀번호
-define('DATABASE', '데이터베이스');  // use database
-
+define('USERID', 'id'); // 사용자
+define('PASSWORD', 'pwd'); // 비밀번호
+define('DATABASE', 'db');  // use database
 // blockid 블록아이디를 기입하는 장소
 $blockid_main = ["5d7750aeb617ea0001c1b2ad","5d7f182fb617ea0001e15dd5",null,
                 "5d7750b7b617ea0001c1b2af","5d7750beffa7480001c2273d",null,

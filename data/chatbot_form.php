@@ -37,7 +37,7 @@ function end_carousel(){
     $carousel = false;
 }
 
-function add_basic($title, $des = '', $thum, $pro = '', $nick = '' , $like = '', $comm = '', $share = ''){
+function add_basic($title, $des = '', $thum = null, $pro = '', $nick = '' , $like = '', $comm = '', $share = ''){
     global $count, $response, $card, $carousel, $index;
 
     $card = "basicCard";
@@ -46,18 +46,18 @@ function add_basic($title, $des = '', $thum, $pro = '', $nick = '' , $like = '',
     if($carousel === true){
         $response['template']['outputs'][$index]['carousel']['items'][$count]['title'] = "$title";
         $response['template']['outputs'][$index]['carousel']['items'][$count]['description'] = "$des";
-        $response['template']['outputs'][$index]['carousel']['items'][$count]['thumbnail'] = "$thum";
+        if($thum != null){$response['template']['outputs'][$index]['carousel']['items'][$count]['thumbnail'] = "$thum";}
     } else {
         $response['template']['outputs'][$count][$card]['title'] ="$title";
         $response['template']['outputs'][$count][$card]['description'] ="$des";
-        $response['template']['outputs'][$count][$card]['thumbnail']['imageUrl'] ="$thum";
+        if($thum !== null){$response['template']['outputs'][$count][$card]['thumbnail']['imageUrl'] ="$thum";}
     }
     $count++;
 
     return $button;
 }
 
-function add_commerce($I, $P, $dis, $pro, $nick, $thum, $link = null){
+function add_commerce($I, $P, $dis, $pro, $nick, $thum = null, $link = null){
     global $count, $response, $card, $carousel, $index;
 
     $result = $P-$dis;
@@ -70,7 +70,7 @@ function add_commerce($I, $P, $dis, $pro, $nick, $thum, $link = null){
         $response['template']['outputs'][$index]['carousel']['items'][$count]['discount'] ="$dis";
         $response['template']['outputs'][$index]['carousel']['items'][$count]['discountPrice'] ="$result";
         $response['template']['outputs'][$index]['carousel']['items'][$count]['currency'] ="won";
-        $response['template']['outputs'][$index]['carousel']['items'][$count]['thumbnails']['imageUrl'] ="$thum";
+        if($thum !== null){$response['template']['outputs'][$index]['carousel']['items'][$count]['thumbnails']['imageUrl'] ="$thum";}
         if($link !== null){
             $response['template']['outputs'][$index]['carousel']['items'][$count]['thumbnails']['link']["web"] ="$link";
         }
@@ -82,7 +82,7 @@ function add_commerce($I, $P, $dis, $pro, $nick, $thum, $link = null){
         $response['template']['outputs'][$count][$card]['discount'] ="$dis";
         $response['template']['outputs'][$count][$card]['discountPrice'] ="$result";
         $response['template']['outputs'][$count][$card]['currency'] ="won";
-        $response['template']['outputs'][$count][$card]['thumbnails']['imageUrl'] ="$thum";
+        if($thum !== null){$response['template']['outputs'][$count][$card]['thumbnails']['imageUrl'] ="$thum";}
         if($link !== null){
             $response['template']['outputs'][$count][$card]['thumbnails']['link']["web"] ="$link";
         }
@@ -94,7 +94,7 @@ function add_commerce($I, $P, $dis, $pro, $nick, $thum, $link = null){
     return $button;
 }
 
-function add_list($I, $thum){
+function add_list($I, $thum = null){
     global $count, $response, $card, $item, $carousel, $index;
 
     $card = "listCard";
@@ -103,10 +103,10 @@ function add_list($I, $thum){
 
     if($carousel === true){
         $response['template']['outputs'][$index]['carousel']['items'][$count]['header']['title'] ="$I";
-        $response['template']['outputs'][$index]['carousel']['items'][$count]['header']['imageUrl'] ="$thum";
+        if($thum !== null){$response['template']['outputs'][$index]['carousel']['items'][$count]['header']['imageUrl'] ="$thum";}
     } else {
         $response['template']['outputs'][$count][$card]['header']['title'] ="$I";
-        $response['template']['outputs'][$count][$card]['header']['imageUrl'] ="$thum";
+        if($thum !== null){$response['template']['outputs'][$count][$card]['header']['imageUrl'] ="$thum";}
     }
     
 

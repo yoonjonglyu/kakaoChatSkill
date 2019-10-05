@@ -38,7 +38,7 @@
 언제든지 고도화 가능하게 개발해야한다. 
 
 
-## authour
+## author
 
 Isa(ryuyoonjong)
 

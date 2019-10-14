@@ -10,10 +10,12 @@
 		mysqli_query($dbc, "set session character_set_client=utf8;");
 		
 		return $dbc;
-    }
+	}
+	
+	// user
 	function check_user($user){
 		$dbc = conn();
-		$query = "SELECT * FROM usertable WHERE user_id = '$user"
+		$query = "SELECT * FROM usertable WHERE user_id = '$user";
 		$result = mysqli_query($dbc, $query);
 		
 		return $result;

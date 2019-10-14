@@ -11,8 +11,11 @@
 		
 		return $dbc;
     }
-	function search_basic($region, $category){
+	function check_user($user){
 		$dbc = conn();
-		mysqli_query($dbc, "SELECT * FROM bizinfodata WHERE sp_region = '$region' AND sp_category = '$category");
+		$query = "SELECT * FROM usertable WHERE user_id = '$user"
+		$result = mysqli_query($dbc, $query);
+		
+		return $result;
 	}
  ?>

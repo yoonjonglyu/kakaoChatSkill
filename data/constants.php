@@ -8,11 +8,11 @@ define('PASSWORD', 'pwd'); // 비밀번호
 define('DATABASE', 'db');  // use database
 
 // blockid 블록아이디를 기입하는 장소
-$blockid_main = ["5d7750aeb617ea0001c1b2ad","5d7f182fb617ea0001e15dd5",null,
-                "5d7750b7b617ea0001c1b2af","5d7750beffa7480001c2273d",null,
-                "5d7750d7b617ea0001c1b2bd","5d7f1894ffa7480001bc22ca",null,
-                null,null,"5d7f1894ffa7480001bc22ca",
-                "5d77527e92690d000181508d","5d77527e92690d000181508d",null]; // *메인 한 카드에 버튼 3개가 들어가니 3개씩 묶어서 사용한다. 사용하지 않는 버튼은 null 으로 사용한다.
+$blockid_main = ["test","test",null,
+                "test","test",null,
+                "test","test",null,
+                null,null,"test",
+                "test","test",null]; // *메인 한 카드에 버튼 3개가 들어가니 3개씩 묶어서 사용한다. 사용하지 않는 버튼은 null 으로 사용한다.
 $blockid_1 = [1,2,3,
             4,5,6,
             7,8,9];//계층1                     // * 전체 블록은 블록아이디 전체 길이에 맞춰서 자동으로 상수를 생성하는 시스템.
@@ -40,7 +40,7 @@ $blockid_8 = [1,2,3,
 
 
 // quck menu 
-$quick_main = ["5d7750aeb617ea0001c1b2ad","5d7f172effa7480001bc22b5","5d7f1738ffa7480001bc22b7",4,5];//메인
+$quick_main = ["test","test","test",4,5];//메인
 $quick_1 = [1,2,3,4,5];//계층1
 $quick_2 = [1,2,3,4,5];//계층2
 $quick_3 = [1,2,3,4,5];//계층3

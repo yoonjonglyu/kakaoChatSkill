@@ -18,12 +18,13 @@ define('MODULES', $ROOT.ROOT.'modules/'); // 모듈(기능) 관련 경로
 require_once(DATA.'chatbot_form.php'); // 카카오톡 스킬 
 require_once(DATA.'constants.php'); // 상수모음
 require_once(DATA.'sql_user.php'); // db 관련 모음
+require_once(DATA.'datamodel.php'); // data model
 require_once(MODULES.'MM.php'); // moudle manager 모든 모듈을 연결하는 파일
 
 
 
+
 // kakao res init 응답 변수 초기화 
-$req = json_decode(file_get_contents("php://input"), true); // req data json
 $count = 0; //item count
 $card = ''; // 카드 구분
 $item = 0; // 리스트 아이템 count

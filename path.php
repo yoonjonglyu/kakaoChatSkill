@@ -19,6 +19,7 @@ require_once(DATA.'chatbot_form.php'); // 카카오톡 스킬
 require_once(DATA.'constants.php'); // 상수모음
 require_once(DATA.'sql_user.php'); // db 관련 모음
 require_once(DATA.'datamodel.php'); // data model
+require_once(DATA.'controller.php'); // data controller
 require_once(MODULES.'MM.php'); // moudle manager 모든 모듈을 연결하는 파일
 
 

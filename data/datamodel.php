@@ -1,4 +1,5 @@
 <?php // author - ISA(류윤종)
+namespace DataModel;
 $req = json_decode(file_get_contents("php://input"), true); // req data json
 
 // data request
@@ -76,62 +77,40 @@ if(isset($extra['index'])){
     $index = $extra['index'];
 }
 ?>
-<?php // data controller
+<?php // data Model
 // main 
-function login_talk(){
-    global $user, $user_id, $user_password;
-
-    $password = hash('sha256', $user_password."test");
+class DataResult {
+    static $result = array(); // 가공한 데이터를 담을 객체
+    static $length = 0; // 가공한 데이터의 전체 길이
     
-    login_user($user, $user_id, $user_password);
-    
-    $result = check_login($user_id, $password);
-    $result = (int)mysqli_num_rows($result);
-
-    return $result;
-}
-function logout_talk(){
-    global $user;
-
-    logout_user($user);
-}
-// manager Node1_1
-function manage_bill(){
-    global $user_id, $user_pwd, $user_dong, $user_ho;
-
-    $data = search_manager($user_dong, $user_ho);
-    $result = array();
-    $max = 0;
-
-    while($row = mysqli_fetch_array($data)){
-        $result[$max]['year'] = $row['test_year'];
-        $result[$max]['month'] = $row['test_month'];
-        $result[$max]['price'] = $row['test_price'];
-        $result[$max]['electric'] = $row['test_1'];
-        $result[$max]['waterworks'] = $row['test_2'];
-        $result[$max]['hotwater'] = $row['test_3'];
-        $result[$max]['heat'] = $row['test_4'];
-        $result[$max]['general'] = $row['test_5'];
-        $result[$max]['clean'] = $row['test_6'];
-        $result[$max]['disinfection'] = $row['test_7'];
-        $result[$max]['elevator'] = $row['test_8'];
-        $result[$max]['repair'] = $row['test_9'];
-        $result[$max]['longrepair'] = $row['test_10'];
-        $result[$max]['security'] = $row['test_11'];
-        $result[$max]['insurance'] = $row['test_12'];
-        $result[$max]['account'] = $row['test_13'];
-        $result[$max]['tenant'] = $row['test_14'];
-        $result[$max]['consignment'] = $row['test_15'];
-        $result[$max]['pubelectric'] = $row['test_16'];
-        $result[$max]['liftelectric'] = $row['test_17'];
-        $result[$max]['pubwater'] = $row['test_18'];
-        $result[$max]['basicheat'] = $row['test_19'];
-        $result[$max]['vote'] = $row['test_20'];
-
-        $max++;
+    public function getResult(){ // 가공한 데이터를 가져오는 메소드
+        return $this->result;
     }
-    $result['length'] = $max-1;
+}
+class TestResult extends DataResult {
+    public function getTestResult($id){
+        check_user($id);
+    }
+}
+class TestClass extends DataResult {
+    public function getTestData($name, $age, $sex){
+        $this->result->name = $name;
+        $this->result->age = $age;
+        $this->result->sex = $sex;
+        
+        $this->length++;
+        $this->result->length = $this->length;
+    }
 
-    return $result;
+    public function getTest2Data($val1, $val2, $val3){
+        global $test, $test2, $test3;
+
+        $this->result->$val1 = $test;
+        $this->result->$val2= $test2;
+        $this->result->$val3 = $test3;
+        
+        //$this->length++;
+        $this->result->$val1->length = $val3//$this->length;
+    }
 }
 ?>

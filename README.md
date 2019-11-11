@@ -29,6 +29,11 @@
 8. doc
 - 개발문서 & sql
 - (sql을 cms처럼 실행해서 설치하는 형태로 만드는게 사용자 편의성에 더 좋지 않을까? 생각중이다.)
+9. datamodel
+- 챗봇에서 필요한 데이터들을 처리하고 가공하는 클래스들이 존재하는 Model 파일
+10. controller
+- 챗봇 view단에서 데이터를 주고 불러오는 역할과 모델에서의 데이터 처리를 컨트롤하는 역할을 하는 함수들이 존재하는 파일
+- MVC패턴 constant -> sql -> model -> controller -> main & node -> controller -> model ...식으로 이루어져있다.
 
 
 
